@@ -12,10 +12,10 @@ def calculate_stake(coins,prices):
     for key in prices:
         coin_val = 0
         coin_val += prices[key]["USD"] * coins[key]
-        print("Stake in {}: {:f}".format(key, coin_val))
+        print("Stake in {}: ${:f} at ${:f} per coin".format(key, coin_val,prices[key]['USD']))
         total_val += coin_val
         return_list[key] = coin_val
-    print("Total Stake In Crypto: {:f}".format(total_val))
+    print("Total Stake In Crypto: ${:f}".format(total_val))
     return_list["total"] = total_val
     return return_list
 
@@ -79,7 +79,6 @@ def update_tables(conn,coins,cash):
             if coin == 'total':
                 continue
 
-            print((now.strftime("%Y-%m-%d"), coins[coin], cash[coin]))
             c.execute(''' INSERT INTO {}(date,num_coins,value)
               VALUES(?,?,?) '''.format(coin.lower()) , (now.strftime("%Y-%m-%d"), coins[coin], cash[coin]))
         conn.commit()
