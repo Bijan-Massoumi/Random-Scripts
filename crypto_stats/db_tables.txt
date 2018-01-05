@@ -1,0 +1,43 @@
+CREATE TABLE
+IF NOT EXISTS total (
+ id integer PRIMARY KEY,
+ date TEXT,
+ num_currency INTEGER,
+ total_val REAL
+);
+
+CREATE TABLE
+IF NOT EXISTS pivx (
+ id integer PRIMARY KEY,
+ date TEXT,
+ num_coins REAL,
+ value REAL
+);
+
+CREATE TABLE
+IF NOT EXISTS omg (
+ id integer PRIMARY KEY,
+ date TEXT,
+ num_coins REAL,
+ value REAL
+);
+
+
+CREATE TABLE
+IF NOT EXISTS eth (
+ id integer PRIMARY KEY,
+ date TEXT,
+ num_coins REAL,
+ value REAL
+);
+
+CREATE TABLE
+IF NOT EXISTS ufr (
+ id integer PRIMARY KEY,
+ date TEXT,
+ num_coins REAL,
+ value REAL
+);
+
+
+.....etc
