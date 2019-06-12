@@ -71,4 +71,4 @@ if __name__ == "__main__":
     abi_path = "./augur_abi.json"
     obj = LogCollector(contract_address, abi_path)
     event = 'OrderFilled(address indexed universe, address indexed shareToken, address filler, bytes32 orderId, uint256 numCreatorShares, uint256 numCreatorTokens, uint256 numFillerShares, uint256 numFillerTokens, uint256 marketCreatorFees, uint256 reporterFees, uint256 amountFilled, bytes32 tradeGroupId)'
-    print(obj.get_logs_by_block_range(7942147, 7942147, event))
+    print(obj.get_logs_by_block_range(7941147, 7942147, event))
